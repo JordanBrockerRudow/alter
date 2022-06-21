@@ -1,0 +1,45 @@
+:root {
+  --animation-speed: 2s;
+  --primary-color: #000;
+  --secondary-color: #000;
+  --background-color: #212121;
+  --text-color: #fff;
+  --font: sans-serif;
+  --bright-yellow: #FFFF66;
+  --bright-orange: #FC6E22;
+  --bright-pink: #FF1493;
+  --bright-purple: #C24CF6;
+  --bright-cyan: #00E7EC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.rain-container {
+  position: relative;
+  background: #000;
+  /*   background: url("https://rb.gy/ufafte") no-repeat center center fixed; */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  object-fit: cover;
+  background-size: cover;
+}
+
+i {
+  position: absolute;
+  height: 120px;
+  border-radius: 0 0 999px 999px;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-120px);
+  }
+  100% {
+    transform: translateY(calc(100vh + 120px));
+  }
+}
